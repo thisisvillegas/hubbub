@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Post implements java.io.Serializable {
     private User author;
     private String content;
-    private LocalDateTime timestamp;
+    private LocalDateTime posted;
 
     public Post() {
     }
@@ -13,7 +13,7 @@ public class Post implements java.io.Serializable {
     public Post(User author, String content) {
         this.author = author;
         this.content = content;
-        this.timestamp = LocalDateTime.now();
+        this.posted = LocalDateTime.now();
     }
 
     public User getAuthor() {
@@ -32,18 +32,18 @@ public class Post implements java.io.Serializable {
         this.content = content;
     }
 
-    public LocalDateTime getTimestamp() {
-        return timestamp;
+    public LocalDateTime getPosted() {
+        return posted;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
-        this.timestamp = timestamp;
+    public void setPosted(LocalDateTime posted) {
+        this.posted = posted;
     }
 
     @Override
     public String toString() {
         return "Post{" + "author=" + author + ", content=" + content +
-                ", timestamp=" + timestamp + '}';
+                ", timestamp=" + posted + '}';
     }
     
     
